@@ -14,7 +14,7 @@
 			preloader = new ThePreloader(474, this.loaderInfo);
 			stage.addChild(preloader);
 			preloader.addEventListener("loadComplete", loadAssets);
-			preloader.addEventListener("preloaderFinished", showSponsors);
+			preloader.addEventListener("preloaderFinished", showMenu);
 		}
 		
 		private function loadAssets(e:Event) : void
@@ -32,6 +32,7 @@
 		
 		private function showMenu(e:Event) : void
 		{
+			stage.removeChild(preloader);
 			new MainMenu(stage).load();
 		}
 		

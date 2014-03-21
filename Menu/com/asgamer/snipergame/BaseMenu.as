@@ -14,7 +14,7 @@
 		public function BaseMenu() 
 		{
 			alpha = 0;
-			y = 400;
+			y = 0;
 		}
 		
 		public function unload(loadMe:BaseMenu = null) : void
@@ -22,7 +22,7 @@
 			if (loadMe != null)
 				loadNext = loadMe;
 				
-			Tweener.addTween(this, { alpha: 0, y:-400, time: 0.7, onComplete:remove } );
+			Tweener.addTween(this, { alpha: 0, y:0, time: .7, onComplete:remove } );
 		}
 		
 		public function remove() : void
@@ -38,7 +38,7 @@
 		public function load() : void
 		{
 			stageRef.addChild(this);
-			Tweener.addTween(this, { alpha: 1, y:0, time: 0.7} );
+			Tweener.addTween(this, { alpha: 1, y:0, time: 2} );
 		}
 		
 	}
